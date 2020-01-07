@@ -143,7 +143,7 @@ html {
     opacity: 0.7;
 }
 
-.fa-facebook {
+.facebook {
   background: #3B5998;
   color: white;
 }
@@ -202,7 +202,7 @@ html {
 <div class="footer">
   <p>THIS project is made by  -sarvesh raut (sarveshraut123@gmail.com)</p>
   <P>                        SOCIAL-MEDIA                           </P>
-  <p><a href="https://mtouch.facebook" class="fa fa-facebook">FACEBOOK</a>
+  <p><a href="https://mtouch.facebook" class="facebook">FACEBOOK</a>
 </p>
 
 </div>

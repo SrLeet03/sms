@@ -5,7 +5,7 @@ include('dbcon.php');
 
 if(isset($_POST['reg_user'])){
     $name = $_POST['name'];
-    $mob_num = $_POST['mob_num'];
+    $mob_num = $_POST['monum'];
     $username = $_POST['username'];
     $pass = $_POST['password']; 
     $branch = $_POST['branch'];
@@ -14,9 +14,9 @@ if(isset($_POST['reg_user'])){
     $query_run = mysqli_query($con,$query) ;
     if(mysqli_num_rows($query_run)>0)
     {
-        echo '<script type="text/javascipt"> alert("useenrlrname already registerd , try another one !")</script>' ;
+        echo '<script type="text/javascipt"> alert("useenrlrname already registerd , try another one !");</script>' ;
     }   
-    $query= "insert into `student` values('$branch','$name','$username','$hostel','$mob_num','$pass')" ; 
+    $query= "insert into `student` values($branch','$name','$username','$hostel','$mob_num','$pass')" ; 
     //  mysqli_query($con, "INSERT INTO `student` (`branch`, `name`, `hostel`, `monum`, `password`, `enrl`) VALUES ('$branch', '$name', '$hostel', '$mob_num', '$pass', '$enrl')");
    if (mysqli_query($con,$query))
     {

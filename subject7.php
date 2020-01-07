@@ -69,7 +69,7 @@ a:hover, a:active {
   <body style="  background-color:#800080;">
   <a href="admindash.php">back to dashboard</a>
 
-    <div class="container">
+    <div class="hunt">
       <div class="row">
         <form action="subject7.php" method="post" enctype="multipart/form-data" >
           <h3>Upload File</h3>
