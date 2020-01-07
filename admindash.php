@@ -19,10 +19,6 @@ session_start();
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-*{
-       /* box-sizing: border-box;*/
-  }
-
 .row::after {
   content: "";
   clear: both;
@@ -175,7 +171,8 @@ html {
 
   <div class="col-6">
     <h1>Hello <?php  echo $_SESSION['name']; ?></h1>
-    <p><b>No one can be perfect all the time, and progress is the only way that you can improve. Try and progress with your work and keep going even if you make mistakes.</b></p>
+    <p style="background-color:green;box-sizing:borde-box;"><b>No one can be perfect all the time, and progress is the only way that you can improve. Try and progress with your work and keep going even if you make mistakes.&#128519;&#128519;&#128519;</b>
+    </p>
 
   </div>
   <div class="col-3 right">
@@ -189,12 +186,12 @@ html {
   <button class="dropbtn"><h2>Assingments</h2></button>
   <div class="dropup-content">
     <a href="subject1.php">SUNJECT 1</a>
-    <a href="#">SUBJECT 2</a>
-    <a href="#">SUBJECT 3</a>
-    <a href="#">SUBJECT 4</a>
-    <a href="#">SUBJECT 5</a>
-    <a href="#">SUBJECT 6</a>
-    <a href="#">SUBJECT 7</a>
+    <a href="subject2.php">SUBJECT 2</a>
+    <a href="subject3.php">SUBJECT 3</a>
+    <a href="subject4.php">SUBJECT 4</a>
+    <a href="subject5.php">SUBJECT 5</a>
+    <a href="subject6.php">SUBJECT 6</a>
+    <a href="subject7.php">SUBJECT 7</a>
 
   </div>
 </div>

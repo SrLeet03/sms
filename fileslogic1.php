@@ -8,14 +8,15 @@ $result = mysqli_query($conn, $sql);
 
 $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-
+session_start();
 // Uploads files
 if (isset($_POST['save'])) { 
+   // session_start();
+    $self_ID = $_SESSION['id'];
     $filename = $_FILES['myfile']['name'];
 
     $extension = pathinfo($filename,PATHINFO_EXTENSION);
 $destination = 'uploads/'.$filename;
-echo $destination;
     $file = $_FILES['myfile']['tmp_name'];
     $size = $_FILES['myfile']['size'];
 
@@ -26,7 +27,7 @@ echo $destination;
     } 
     else {
         if (move_uploaded_file($file, $destination)) {
-            $sql = "INSERT INTO files1 (name, size, downloads) VALUES ('$filename', $size, 0)";
+            $sql = "INSERT INTO files1 (name, size, downloads, userID) VALUES ('$filename', $size, 0, $self_ID)";
             if (mysqli_query($conn, $sql)) {
                 echo  "<script>alert('file uploaded succsesfully !!.');</script>";
             }

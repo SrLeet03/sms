@@ -1,6 +1,6 @@
-<?php include 'fileslogic1.php';
+<?php include 'fileslogic.php';
 
-//session_start();
+session_start();
 
      if(isset($_GET['logout']))
      {
@@ -50,51 +50,32 @@ td {
   vertical-align: center;
   border: 1px solid black;
 }
-a:link, a:visited {
-  background-color: #f44336;
-  color: white;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a:hover, a:active {
-  background-color: red;
-}
 
   </style>
     <link rel="stylesheet" href="style.css">
     <title>Files Upload and Download</title>
   </head>
   <body style="  background-color:#800080;">
-  <a href="admindash.php">back to dashboard</a>
-
     <div class="container">
       <div class="row">
         <form action="subject1.php" method="post" enctype="multipart/form-data" >
           <h3>Upload File</h3>
           <input type="file" name="myfile"> <br>
-          <button type="submit" name="save">upload</button>
-        </form>
-      </div>
-    </div>
-    <h3>LIST OF UPLOADED FILES --></h3>
-
-    <div style="background-color:blue;margin-right:300px;">
           <?php 
           include('dbcon.php');
-          //session_start();
-          $self_ID = $_SESSION['id'];
-          $files  = mysqli_query($con, "SELECT name from files1 where userID = $self_ID");
+
+          $files  = mysqli_query($con, "SELECT name from files1");
           
 $i = 1;
           while($row = $files->fetch_assoc()){
 
-            echo $i.". ".$row['name']."<br>"."<br>";
+            echo $i.". ".$row['name']."<br>";
             $i += 1;
           }
           ?>
-       </div>  
+          <button type="submit" name="save">upload</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

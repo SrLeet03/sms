@@ -65,6 +65,18 @@ img.avatar {
   }
  
 }
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
 </style>
 </head>
 <body style="background-color:#2F4F4F">
@@ -92,6 +104,9 @@ img.avatar {
   <div class="container" style="background-color:#f1f1f1">
   </div>
 </form></div>
+<<br>
+<br>
+<a href="index.php">back to singup page</a>
 
 </body>
 </html>
@@ -109,6 +124,7 @@ img.avatar {
               $_SESSION['username']=$username;
               $name = $query_run->fetch_assoc();
               $_SESSION['name'] = $name['name'];
+              $_SESSION['id'] = $name['id'];
               header('location:admindash.php');
           }
           else{

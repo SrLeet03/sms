@@ -1,6 +1,6 @@
-<?php include 'fileslogic1.php';
+<?php include 'fileslogic7.php';
 
-//session_start();
+session_start();
 
      if(isset($_GET['logout']))
      {
@@ -62,7 +62,6 @@ a:link, a:visited {
 a:hover, a:active {
   background-color: red;
 }
-
   </style>
     <link rel="stylesheet" href="style.css">
     <title>Files Upload and Download</title>
@@ -72,7 +71,7 @@ a:hover, a:active {
 
     <div class="container">
       <div class="row">
-        <form action="subject1.php" method="post" enctype="multipart/form-data" >
+        <form action="subject7.php" method="post" enctype="multipart/form-data" >
           <h3>Upload File</h3>
           <input type="file" name="myfile"> <br>
           <button type="submit" name="save">upload</button>
@@ -86,7 +85,7 @@ a:hover, a:active {
           include('dbcon.php');
           //session_start();
           $self_ID = $_SESSION['id'];
-          $files  = mysqli_query($con, "SELECT name from files1 where userID = $self_ID");
+          $files  = mysqli_query($con, "SELECT name from files7 where userID = $self_ID");
           
 $i = 1;
           while($row = $files->fetch_assoc()){
