@@ -1,4 +1,4 @@
-<?php include 'fileslogic.php';?>
+<?php include 'fileslogic1.php';?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +17,7 @@
     <th>Action</th>
 </thead>
 <tbody>
-  <?php foreach ($files1 as $file): ?>
+  <?php foreach ($files as $file): ?>
     <tr>
       <td><?php echo $file['id']; ?></td>
       <td><?php echo $file['name']; ?></td>

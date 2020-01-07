@@ -91,7 +91,7 @@ a:hover, a:active {
 $i = 1;
           while($row = $files->fetch_assoc()){
 
-            echo $i.". ".$row['name']."<br>"."<br>";
+            echo $i.". ".$row['name']."<br>"."<br>";?><a href="downloads.php"> [[Download]]</a><?php
             $i += 1;
           }
           ?>
